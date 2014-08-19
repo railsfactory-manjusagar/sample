@@ -1,0 +1,14 @@
+<h1> Editing </h1>
+ <%= form_for @post do |f| %>
+<p><%= f.label :name %>
+<%= f.text_field :name %>
+</p>
+<p><%= f.label :status %>
+<%= f.text_area :status %>
+</p>
+<p><%= f.submit "edit a new item" %></p>
+    <%= link_to "back",posts_path%>
+ <%= link_to "show",post_path%>
+<% end %>
+
+ 

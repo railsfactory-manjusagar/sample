@@ -1,0 +1,7 @@
+<h1> the items are </h1>
+   <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+ <h4> <%= @post.name %></h4>
+  <h4> <%= @post.status %> </h4>
+   <small> <%= @post.created_at %> </small>

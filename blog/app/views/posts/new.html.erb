@@ -1,0 +1,10 @@
+<h1>Add a new item</h1>
+<%= form_for @post do |f| %>
+<p><%= f.label :name %>
+<%= f.text_field :name %>
+</p>
+<p><%= f.label :status %>
+<%= f.text_area :status %>
+</p>
+<p><%= f.submit "Add a new item" %></p>
+<% end %>

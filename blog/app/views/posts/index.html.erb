@@ -1,0 +1,22 @@
+<h1> Todo application </h1>
+
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+ <% @posts.each do |item| %>
+    <table border = '3' >
+         <tr><th>item &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>status</th></tr>
+          <ol> 
+              <tr>
+            <h5> <td><%=link_to item.name,item %></td></h5>
+          </ol>
+            <h5><td> <%= item.status %></td> </h5>
+               </tr>
+              </table><br/> 
+               <%= link_to 'Edit',edit_post_path(item) %> &nbsp;
+               <%= link_to 'Destroy',item, method: :delete, data: { confirm: 'Are you sure?' } %>
+             <hr />
+<% end %>
+     
+
+     <p> <%= link_to "click here to insert new item",new_post_path %> </p>
